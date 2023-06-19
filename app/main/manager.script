@@ -1,0 +1,34 @@
+local ____exports = {}
+local druid = require("druid.druid")
+local default_style = require("druid.styles.default.style")
+local ____Manager = require("modules.Manager")
+local register_manager = ____Manager.register_manager
+function ____exports.init(self)
+    msg.post(".", "acquire_input_focus")
+    register_manager()
+    Manager.init(
+        function()
+            Sound.attach_druid_click("sel")
+            default_style.scroll.WHEEL_SCROLL_SPEED = 10
+            druid.set_default_style(default_style)
+            Camera.set_go_prjection(-1, 1)
+            Scene.load("menu", true)
+            Scene.set_bg("#999")
+        end,
+        true
+    )
+end
+function ____exports.update(self, dt)
+    Manager.update(dt)
+end
+function ____exports.on_message(self, message_id, _message, sender)
+    Manager.on_message(self, message_id, _message, sender)
+    if message_id == to_hash("LOAD_SCENE") then
+        local message = _message
+        local name = message.name
+    end
+end
+init = ____exports.init
+update = ____exports.update
+on_message = ____exports.on_message
+
