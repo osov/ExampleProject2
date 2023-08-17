@@ -152,6 +152,7 @@ function ManagerModule() {
         broadcast.send(message_id, message);
     }
 
+
     return { init, on_message, send, send_raw, send_game, send_raw_game, send_raw_ui, is_ready, init_gui, on_message_gui, update, final, register_message, trigger_message, MANAGER_ID };
 }
 

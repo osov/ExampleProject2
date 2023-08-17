@@ -122,7 +122,7 @@ function ____exports.Game()
     local orig_cell_size = 32
     cell_size = 32
     local offset_border = 10
-    items_offset = vmath.vector3(offset_border, -90, 0)
+    items_offset = vmath.vector3(offset_border, -150, 0)
     cnt_step = 0
     scale_ratio = 1
     cells = {}

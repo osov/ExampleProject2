@@ -27,7 +27,7 @@ export function Game() {
     const orig_cell_size = 32;
     let cell_size = 32;
     const offset_border = 10;
-    const items_offset = vmath.vector3(offset_border, -90, 0);
+    const items_offset = vmath.vector3(offset_border, -150, 0);
     let cnt_step = 0;
     let scale_ratio = 1;
     const cells: CellData[] = [];

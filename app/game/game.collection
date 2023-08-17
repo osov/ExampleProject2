@@ -1,4 +1,4 @@
-name: "game_3"
+name: "game"
 scale_along_z: 0
 embedded_instances {
   id: "game_logic"
